@@ -1,4 +1,23 @@
 const Navbar = () => {
+  const navbarItems = (
+    <>
+      <li>
+        <a href="#">Home</a>
+      </li>
+      <li>
+        <a href="#">Company</a>
+      </li>
+      <li>
+        <a href="#">Resources</a>
+      </li>
+      <li>
+        <a href="#">About</a>
+      </li>
+      <li>
+        <a href="#">Contact</a>
+      </li>
+    </>
+  );
   return (
     <div className="navbar shadow-sm container mx-auto ">
       <div className="navbar-start">
@@ -27,48 +46,14 @@ const Navbar = () => {
             tabIndex={0}
             className="menu menu-sm dropdown-content bg-[#000300] text-[#00df9a] rounded-box z-1 mt-3 w-52 p-2 shadow"
           >
-            <li>
-              <a>Item 1</a>
-            </li>
-            <li>
-              <a>Parent</a>
-              <ul className="p-2">
-                <li>
-                  <a>Submenu 1</a>
-                </li>
-                <li>
-                  <a>Submenu 2</a>
-                </li>
-              </ul>
-            </li>
-            <li>
-              <a>Item 3</a>
-            </li>
+            {navbarItems}
           </ul>
         </div>
         <a className="font-bold text-3xl text-[#00df9a]">Brand</a>
       </div>
       <div className="navbar-center hidden lg:flex">
         <ul className="menu menu-horizontal px-1 text-[#00df9a] text-lg font-bold">
-          <li>
-            <a>Item 1</a>
-          </li>
-          <li>
-            <details>
-              <summary>Parent</summary>
-              <ul className="p-2">
-                <li>
-                  <a>Submenu 1</a>
-                </li>
-                <li>
-                  <a>Submenu 2</a>
-                </li>
-              </ul>
-            </details>
-          </li>
-          <li>
-            <a>Item 3</a>
-          </li>
+          {navbarItems}
         </ul>
       </div>
       <div className="navbar-end">
